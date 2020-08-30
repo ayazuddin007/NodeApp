@@ -5,7 +5,7 @@
   connection: ssh
 
   tasks:
-  - name: copy a deplyment file to Kubernetes
+  - name: copy a deployment file to Kubernetes
     copy: src=./valaxy-deploy.yml dest=/root/
     
   - name: create a deployment
