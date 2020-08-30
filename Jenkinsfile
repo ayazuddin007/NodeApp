@@ -7,11 +7,11 @@ pipeline {
     agent any
 
     stages {
-        stage("Git Clone") {
-            steps {
-                git branch: 'master', credentialsId: 'gitCredentials', url: 'https://github.com/ayazuddin007/NodeJSApp.git'
-            }
-        }
+        //stage("Git Clone") {
+           // steps {
+            //    git branch: 'master', credentialsId: 'gitCredentials', url: 'https://github.com/ayazuddin007/NodeJSApp.git'
+            //}
+        //}
         stage("Copy NodeJSApp Files to Ansible") {
             steps {
                 sshagent(['ansibleCredentials']) {
