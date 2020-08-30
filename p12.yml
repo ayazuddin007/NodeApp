@@ -10,8 +10,8 @@
         ignore_errors: true
 
       - name: Delete a docker image
-        command: docker rmi -f ayazway/priv-repo
+        command: docker rmi -f ayazway/nodejs-test
         ignore_errors: true
         
       - name: Create a docker container
-        command: docker run --name mycon -p 8080:8080 -itd ayazway/priv-repo
+        command: docker run --name mycon -p 8080:8080 -itd ayazway/nodejs-test
