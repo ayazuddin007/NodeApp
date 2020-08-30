@@ -1,7 +1,7 @@
 def ansibleServerIP = '172.31.7.186'
 def pushDockerImage = 'ansible-playbook -i hosts p11.yml'
-def createK8SDeployment = 'ansible-playbook -i hosts kubernetes-valaxy-deployment.yml'
-def createK8Service = 'ansible-playbook -i hosts kubernetes-valaxy-service.yml'
+def createK8SDeployment = 'ansible-playbook -i hosts kubernetes-click2cloud-deployment.yml'
+def createK8Service = 'ansible-playbook -i hosts kubernetes-click2cloud-service.yml'
 
 pipeline {
     agent any
@@ -31,9 +31,9 @@ pipeline {
         stage('Deploy to Kubernetes Cluster') {
             steps {
                 sshagent(['ansibleCredentials']) {
-                    // Create valaxy-deployment on K8S Server by running playbook on Ansible Server
+                    // Create click2cloud-deployment on K8S Server by running playbook on Ansible Server
                     sh "ssh -o StrictHostKeyChecking=no ec2-user@${ansibleServerIP} ${createK8SDeployment}"
-                    // Create valaxy-service on K8S Server by running playbook on Ansible Server
+                    // Create click2cloud-service on K8S Server by running playbook on Ansible Server
                     sh "ssh -o StrictHostKeyChecking=no ec2-user@${ansibleServerIP} ${createK8Service}"     
                 }
             }
