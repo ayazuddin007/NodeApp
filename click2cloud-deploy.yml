@@ -25,11 +25,11 @@ spec:
         ports:
         - containerPort: 3000
         resources:
-        requests:
-          memory: "18Mi"
-          cpu: "100m"
-        limits:
-          memory: "32Mi"
-          cpu: "200m"
+          requests:
+            memory: "18Mi"
+            cpu: "100m"
+          limits:
+            memory: "32Mi"
+            cpu: "200m"
       imagePullSecrets:
       - name: regcred
