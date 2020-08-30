@@ -12,7 +12,7 @@ pipeline {
                 git branch: 'master', credentialsId: 'gitCredentials', url: 'https://github.com/ayazuddin007/NodeJSApp.git'
             }
         }
-        stage("Copy NodeApp files to Ansible") {
+        stage("Copy NodeJSApp Files to Ansible") {
             steps {
                 sshagent(['ansibleCredentials']) {
                     // Copy war file to Ansible Server
