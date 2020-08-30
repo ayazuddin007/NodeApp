@@ -8,7 +8,7 @@ spec:
   scaleTargetRef: 
     apiVersion: app/v1 
     kind: Deployment 
-    name: fib 
+    name: click2cloud-deployment 
   metrics: 
   - type: Resource 
     resource: 
