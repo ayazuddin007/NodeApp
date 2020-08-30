@@ -23,6 +23,6 @@ spec:
         image: ayazway/nodejs-test:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
       imagePullSecrets:
       - name: regcred
