@@ -1,5 +1,5 @@
 def ansibleServerIP = '172.31.7.186'
-def pushDockerImage = 'ansible-playbook -i hosts p11.yml'
+def pushDockerImage = 'ansible-playbook -i hosts docker-image.yml'
 def createK8SDeployment = 'ansible-playbook -i hosts kubernetes-click2cloud-deployment.yml'
 def createK8Service = 'ansible-playbook -i hosts kubernetes-click2cloud-service.yml'
 
