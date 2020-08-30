@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: valaxy-service
+  name: click2cloud-service
   labels:
-    app: valaxy-devops-project
+    app: click2cloud-devops-project
 spec:
   selector:
-    app: valaxy-devops-project
+    app: click2cloud-devops-project
   type: LoadBalancer
   ports:
     - port: 3000
