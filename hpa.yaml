@@ -3,8 +3,8 @@ apiVersion: autoscaling/v2beta1
 metadata: 
   name: click2cloud-scaling
 spec: 
-  maxReplicas: 10 
-  minReplicas: 1 
+  maxReplicas: 10
+  minReplicas: 7
   scaleTargetRef: 
     apiVersion: app/v1 
     kind: Deployment 
