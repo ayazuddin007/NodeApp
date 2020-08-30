@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("Git Clone") {
             steps {
-                git branch: 'master', credentialsId: 'gitCredentials', url: 'https://github.com/ayazuddin007/NodeApp.git'
+                git branch: 'master', credentialsId: 'gitCredentials', url: 'https://github.com/ayazuddin007/NodeJSApp.git'
             }
         }
         stage("Copy NodeApp files to Ansible") {
