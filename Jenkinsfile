@@ -23,7 +23,7 @@ pipeline {
         stage("Push Docker Image to Docker Hub") {
             steps {
                 sshagent(['ansibleCredentials']) {
-                    // Push Docker Image to Docker Hub by Runnning p11.yml on localhost(Ansible)
+                    // Push Docker Image to Docker Hub by Runnning docker-image.yml on Ansible Server
                     sh "ssh -o StrictHostKeyChecking=no ec2-user@${ansibleServerIP} ${pushDockerImage}"
                 }
             }
@@ -31,9 +31,9 @@ pipeline {
         stage('Deploy to Kubernetes Cluster') {
             steps {
                 sshagent(['ansibleCredentials']) {
-                    // Create click2cloud-deployment on K8S Server by running playbook on Ansible Server
+                    // Create click2cloud-deployment on K8S Server by running kubernetes-click2cloud-deployment.yml on Ansible Server
                     sh "ssh -o StrictHostKeyChecking=no ec2-user@${ansibleServerIP} ${createK8SDeployment}"
-                    // Create click2cloud-service on K8S Server by running playbook on Ansible Server
+                    // Create click2cloud-service on K8S Server by running kubernetes-click2cloud-service.yml on Ansible Server
                     sh "ssh -o StrictHostKeyChecking=no ec2-user@${ansibleServerIP} ${createK8Service}"     
                 }
             }
