@@ -58,11 +58,22 @@ Pre-requisite
   - Ansible excutes the kubernetes-click2cloud-deployment.yml and kubernetes-click2cloud-service.yml files. 
   - While executing kubernetes-click2cloud-deployment.yml file on Ansible, the k8s deployment file (i.e click2cloud-deploy.yml) will be get copied into the K8s and create       the pods and expose the port on 3000.
   - While executing kubernetes-click2cloud-service.yml file on Ansible,it will copy the k8s service file (i.e click2cloud-service.yml) on kubernetes and create the service and expose the service on port 31200.
-  - To check the output : http://<K8s-Master-IP>:31200.
+  
   
   Jmeter Test
   -------------
   - We have Done the Jmeter Load test and performance test ,whose files are available in jmeter directory for reference. 
+  
+  Kubernetes Deployment File (click2cloud-deploy.yml) 
+  -------------------------------------------------------
+  - it will first creat 10 pods,when there is a code update it will suddenly roll out to 7, then to 10.Minimum 7 pod will be running.
+  - it will expose the port to 3000.
+  - if cpu and memory utilization is above 50%,then it will perform scaling.
+  
+  Kubernetes Service File (click2cloud-service.yml)
+  -------------------------------------------------------
+  - it will create the service of type load balancer and expose the service oustside world by 31200 port.
+  - to check the output : http://<K8s-Master-IP>:31200.
       
     
    
