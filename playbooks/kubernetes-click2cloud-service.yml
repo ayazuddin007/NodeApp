@@ -9,4 +9,4 @@
     copy: src=./kubernetes/click2cloud-service.yml dest=/root/
     
   - name: create a service
-    command: kubectl apply -f click2cloud-service.yml
+    command: kubectl apply -f ./playbooks/click2cloud-service.yml
