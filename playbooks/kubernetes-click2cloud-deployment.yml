@@ -6,7 +6,7 @@
 
   tasks:
   - name: copy a deployment file to Kubernetes
-    copy: src=./kubernetes/click2cloud-deploy.yml dest=/root/
+    copy: src=/home/ec2-user/kubernetes/click2cloud-deploy.yml dest=/root/
     
   - name: create a deployment
     command: kubectl apply -f click2cloud-deploy.yml
