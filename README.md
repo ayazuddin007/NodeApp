@@ -73,7 +73,7 @@ Pre-requisite
   Kubernetes Service File (click2cloud-service.yml)
   -------------------------------------------------------
   - it will create the service of type load balancer and expose the service oustside world by 31200 port.
-  - to check the output : http://<K8s-Master-IP>:31200.
+  - to check the output : http:// K8s-Master-IP:31200.
       
     
    
