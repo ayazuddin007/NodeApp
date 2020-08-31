@@ -1,7 +1,7 @@
 def ansibleServerIP = '172.31.7.186'
-def pushDockerImage = 'ansible-playbook -i hosts /home/ec2-user/playbooks/docker-image.yml'
-def createK8SDeployment = 'ansible-playbook -i hosts /home/ec2-user/playbooks/kubernetes-click2cloud-deployment.yml'
-def createK8Service = 'ansible-playbook -i hosts /home/ec2-user/playbooks/kubernetes-click2cloud-service.yml'
+def pushDockerImage = 'ansible-playbook -i hosts ./playbooks/docker-image.yml'
+def createK8SDeployment = 'ansible-playbook -i hosts ./playbooks/kubernetes-click2cloud-deployment.yml'
+def createK8Service = 'ansible-playbook -i hosts ./playbooks/kubernetes-click2cloud-service.yml'
 
 pipeline {
     agent any
