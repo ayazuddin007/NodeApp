@@ -39,7 +39,7 @@ Pre-requisite
      
   1)Declarative Checkout SCM
   ---------------------------
-     - when a devloper commits the Node JS Application code in SCM (Git & Github),then jenkins get triggered by pollscm option enabled in the job.It pull the code form github and store it into the jenkins job work space.
+   - when a devloper commits the Node JS Application code in SCM (Git & Github),then jenkins get triggered by pollscm option enabled in the job.It pull the code form github and store it into the jenkins job work space.
   
   2)Copy NodeJS App file to Ansible
   ---------------------------------
