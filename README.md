@@ -56,7 +56,7 @@ Pre-requisite
   4)Deploy to kubernetes cluster
   -----------------------------
   - Ansible excutes the kubernetes-click2cloud-deployment.yml and kubernetes-click2cloud-service.yml files. 
-  - While executing kubernetes-click2cloud-deployment.yml file on Ansible, the k8s deployment file (i.e click2cloud-deploy.yml) will be get copied into the K8s and create       the pods and expose the port on 3000.
+  - While executing kubernetes-click2cloud-deployment.yml file on Ansible, the k8s deployment file (i.e click2cloud-deploy.yml) will be get copied into the K8s and pull the nodejs-test image from docker hub create the pods and expose the port on 3000.
   - While executing kubernetes-click2cloud-service.yml file on Ansible,it will copy the k8s service file (i.e click2cloud-service.yml) on kubernetes and create the service and expose the service on port 31200.
   
   
