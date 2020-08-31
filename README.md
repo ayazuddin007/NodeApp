@@ -49,9 +49,21 @@ Pre-requisite
                      
   3)Push Docker Image to Docker Hub
   --------------------------------
+  - Ansible executes the docker-image.yml files,it has the task to build the dockerfile which will create the node-js images , tag it and upload it to the dockerhub(i.e ayazway)
+  - Dockerfile, Node js will expose the port to 3000.
+  
   
   4)Deploy to kubernetes cluster
   -----------------------------
+  - Ansible excutes the kubernetes-click2cloud-deployment.yml and kubernetes-click2cloud-service.yml files. 
+  - While executing kubernetes-click2cloud-deployment.yml file on Ansible, the k8s deployment file (i.e click2cloud-deploy.yml) will be get copied into the K8s and create       the pods and expose the port on 3000.
+  - While executing kubernetes-click2cloud-service.yml file on Ansible,it will copy the k8s service file (i.e click2cloud-service.yml) on kubernetes and create the service and expose the service on port 31200.
+  - To check the output : http://<K8s-Master-IP>:31200.
+  
+  Jmeter Test
+  -------------
+  - We have Done the Jmeter Load test and performance test ,whose files are available in jmeter directory for reference. 
+      
     
    
   
