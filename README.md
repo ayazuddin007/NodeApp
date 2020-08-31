@@ -32,17 +32,21 @@ Pre-requisite
   CI-CD Pipline Stages
   ---------------------
   In the Jenkinsfile, it is divided into 4 stages.
-     - Declarative Checkout SCM
-     - Copy NodeJS App file to Ansible
-     - Push Docker Image to Docker Hub
-     - Deploy to kubernetes cluster
+     1) Declarative Checkout SCM
+     2) Copy NodeJS App file to Ansible
+     3) Push Docker Image to Docker Hub
+     4) Deploy to kubernetes cluster
      
   1)Declarative Checkout SCM
   ---------------------------
+     - when a devloper commits the Node JS Application code in SCM (Git & Github),then jenkins get triggered by pollscm option enabled in the job.It pull the code form github and store it into the jenkins job work space.
   
   2)Copy NodeJS App file to Ansible
-  -------------------------------
-  
+  ---------------------------------
+   - Jenkins copies the node js application files to Ansible.Ansible is acting as Configuration Manager and deployer.Ansible has all nodes (Docker and kubernetes) in its inventory file (hosts file). It also has the Docker file.Ansible has the all playbooks and kubernets yaml files.
+      Ansible playbook files:  docker-container.yml,docker-image.yml,kubernetes-click2cloud-deployment.yml,kubernetes-click2cloud-service.yml,kubernetes-click2cloud-podscaling.yml and kubernetes-click2cloud-service.yml
+      kubernets files: click2cloud-deploy.yml and click2cloud-service.yml
+                     
   3)Push Docker Image to Docker Hub
   --------------------------------
   
