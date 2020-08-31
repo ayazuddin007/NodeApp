@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sshagent(['ansibleCredentials']) {
                     // Copy war file to Ansible Server
-                    sh "scp -o StrictHostKeyChecking=no * ec2-user@${ansibleServerIP}:/home/ec2-user/"
+                    sh "scp -o StrictHostKeyChecking=no -R * ec2-user@${ansibleServerIP}:/home/ec2-user/"
                 }
             }
         }
