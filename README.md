@@ -32,10 +32,10 @@ Pre-requisite
   CI-CD Pipline Stages
   ---------------------
   In the Jenkinsfile, it is divided into 4 stages.
-     -->Declarative Checkout SCM
-     -->Copy NodeJS App file to Ansible
-     -->Push Docker Image to Docker Hub
-     -->Deploy to kubernetes cluster.
+     - Declarative Checkout SCM
+     - Copy NodeJS App file to Ansible
+     - Push Docker Image to Docker Hub
+     - Deploy to kubernetes cluster
      
   1)Declarative Checkout SCM
   ---------------------------
